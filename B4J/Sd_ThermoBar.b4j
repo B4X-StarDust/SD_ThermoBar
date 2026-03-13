@@ -1,0 +1,46 @@
+﻿AppType=JavaFX
+Build1=Default,b4j.example
+File1=Main.bjl
+FileGroup1=Default Group
+Group=Default Group
+Library1=jcore
+Library2=jfx
+Library3=jxui
+Module1=|relative|..\ThermoBar
+NumberOfFiles=1
+NumberOfLibraries=3
+NumberOfModules=1
+Version=10.3
+@EndOfDesignText@
+#Region Project Attributes 
+	#MainFormWidth: 600
+	#MainFormHeight: 600 
+#End Region
+
+#LibraryAuthor: Star-Dust
+#LibraryName: SD_ThermoBar
+#LibraryVersion: 1.0
+
+Sub Process_Globals
+	Private fx As JFX
+	Private MainForm As Form
+	Private ThermoBar1 As ThermoBar
+End Sub
+
+Sub AppStart (Form1 As Form, Args() As String)
+	MainForm = Form1
+ 	MainForm.RootPane.LoadLayout("Main")
+	MainForm.Show
+	
+	ThermoBar1.AnimateTo(10,200)
+	Sleep(1000)
+	ThermoBar1.AnimateTo(20,200)
+	Sleep(1000)
+	ThermoBar1.AnimateTo(30,200)
+	Sleep(1000)
+	ThermoBar1.AnimateTo(40,200)
+	Sleep(1000)
+	ThermoBar1.AnimateTo(50,200)
+	Sleep(1000)
+	ThermoBar1.AnimateTo(90,200)
+End Sub
